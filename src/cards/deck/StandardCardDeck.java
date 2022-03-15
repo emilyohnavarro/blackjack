@@ -1,4 +1,8 @@
-package cards;
+package cards.deck;
+
+import cards.card.Card;
+import cards.card.NonNumericalCard;
+import cards.card.Suit;
 
 /**
  * Represents a standard deck of 52 playing cards

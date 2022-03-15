@@ -1,8 +1,11 @@
-package cards;
+package cards.deck;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Stack;
+
+import cards.card.Card;
 
 /**
  * Represents a generic deck of cards of no specific size or content
@@ -12,15 +15,15 @@ import java.util.List;
  */
 public abstract class CardDeck {
 
-	private List<Card> cards;
+	private Stack<Card> cards;
 
 	protected CardDeck() {
-		cards = new ArrayList<>();
+		cards = new Stack<>();
 	}
 
 
 	/**
-	 * Adds a card to this deck
+	 * Adds a card to this deck at an undetermined position
 	 * 
 	 * @param c	the card to add
 	 */
@@ -39,6 +42,11 @@ public abstract class CardDeck {
 	 */
 	public void shuffle() {
 		Collections.shuffle(cards);
+	}
+	
+	
+	public Card draw() {
+		return cards.pop();
 	}
 	
 	

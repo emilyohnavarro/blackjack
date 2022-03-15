@@ -1,4 +1,6 @@
-package cards;
+package cards.deck;
+
+import cards.card.Card;
 
 /**
  * Represents a deck of cards that consists of multiple standard decks

@@ -1,4 +1,4 @@
-package cards;
+package cards.deck;
 
 import static org.junit.jupiter.api.Assertions.*;
 

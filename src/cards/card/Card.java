@@ -1,11 +1,11 @@
-package cards;
+package cards.card;
 
 public class Card {
 
 	private Suit suit;
 	private String value;
 
-	private Card(Suit suit, String value) {
+	public Card(Suit suit, String value) {
 		this.suit = suit;
 		this.value = value;
 	}
