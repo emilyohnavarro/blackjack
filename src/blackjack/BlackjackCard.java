@@ -25,12 +25,11 @@ public class BlackjackCard extends Card {
 	 * @param suit  the suit of the card
 	 * @param value the value of the card in string form (either a number or a
 	 *              String such as king, ace, queen...)
-	 * @param state state of the card
 	 * 
 	 * @return the new card
 	 */
-	public static BlackjackCard createBlackjackCard(Suit suit, String value, CardState state) {
-		return new BlackjackCard(suit, value, state);
+	public static BlackjackCard createBlackjackCard(Suit suit, String value) {
+		return new BlackjackCard(suit, value, CardState.UNDEALT);
 	}
 	
 	
@@ -41,6 +40,12 @@ public class BlackjackCard extends Card {
 	
 	public void setCardState(CardState state) {
 		this.state = state;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return (super.toString() + ", state: " + state);
 	}
 
 }
